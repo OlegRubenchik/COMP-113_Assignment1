@@ -7,13 +7,14 @@ int power(int, int); //	A function that raises a number to a certain degree
 void reverseArray(int A[],int revA[], int);
 void displayArray(int A[], int);
 int convertToDecimal(int A[], int);
+bool isBitSet(int num, int pos);
 int main() {
 	const int MAX = 10; // Maximum size of bits
 	int answer[MAX] = { 0,0,1,1 }; // Answer in Binary form
 	int size; // Actual size of bits
 	int MAX_NUM;
 	int revA[MAX];
-	cout << power(2, 0);
+	cout << isBitSet(4,6);
 	return 0;
 }
 int power(int num,int power) {
