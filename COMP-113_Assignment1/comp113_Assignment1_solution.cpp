@@ -6,6 +6,7 @@
 * \date 02/04/2024
 */
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 //All descriptions of all the functions are written below
@@ -44,7 +45,7 @@ int main() {
 		int countline = 0; // How many numbers we printed
 		for (int i = 1; i <= MAX_NUM; i++) {
 			if (isBitSet(i, pos)) { // Is bit at certain position is set to 1?
-				cout << i << ' ';
+				cout << setw(3) << i;
 				countline += 1; // We just printed a number
 			}
 			if (countline == 10) { // If we printed 10 numbers, get to the new line
@@ -56,7 +57,8 @@ int main() {
 		char reply;
 		cout << "Is your number in the above table (y/n): ";
 		cin >> reply;
-		if (reply == 'y') answer[pos] = 1; /* If secret number is present in printed table, then we know that that number has bit set to 1 at certain posion
+		if (reply == 'y') answer[pos] = 1; /* If secret number is present in printed table, 
+											then we know that that number has bit set to 1 at certain posion
 											If not, we know it is set to 0 */								
 	}
 	int secretNumber = convertToDecimal(answer, size); // Since we got the binary form of our secret number,we can convert it to decimal
